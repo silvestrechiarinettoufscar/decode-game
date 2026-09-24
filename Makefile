@@ -15,14 +15,14 @@ ELF = riscv.elf
 DUMP = riscv.dump
 TXT = riscv.txt
 GEN = encoding
-SRC = main.c
-
+SRC = main.c 
+HEADERS = 
 # Alvo padrão
 all: $(TXT)
 
 # Compila o programa C
-$(GEN): $(SRC)
-	$(CC) $(CFLAGS) -o $@ $<
+$(GEN): $(SRC) $(HEADERS)
+	$(CC) $(CFLAGS) -o $@ $(SRC)
 
 # Gera riscv.txt chamando o programa
 $(TXT): $(GEN) $(ASM)

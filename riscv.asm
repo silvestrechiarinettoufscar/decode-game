@@ -1,3 +1,4 @@
+.globl _start
 _start:
     # R-type: registradores
     add     x5, x1, x2         # R: rd=x5, rs1=x1, rs2=x2, funct3=000, funct7=0000000

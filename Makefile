@@ -16,7 +16,7 @@ DUMP = riscv.dump
 TXT = riscv.txt
 GEN = encoding
 SRC = main.c
-ADD = arquivoquefalaoi.c
+ADD = 
 SRC += $(ADD)
 .PHONY: all run clean
 

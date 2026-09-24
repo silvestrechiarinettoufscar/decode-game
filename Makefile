@@ -15,8 +15,10 @@ ELF = riscv.elf
 DUMP = riscv.dump
 TXT = riscv.txt
 GEN = encoding
-SRC = main.c 
-HEADERS = 
+SRC = main.c
+ADD =
+SRC += $(ADD)
+
 # Alvo padrão
 all: $(TXT)
 

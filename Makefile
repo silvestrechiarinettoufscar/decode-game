@@ -16,18 +16,19 @@ DUMP = riscv.dump
 TXT = riscv.txt
 GEN = encoding
 SRC = main.c
-ADD =
+ADD = arquivoquefalaoi.c
 SRC += $(ADD)
+.PHONY: all run clean
 
 # Alvo padrão
-all: $(TXT)
+all: run 
 
 # Compila o programa C
 $(GEN): $(SRC)
 	$(CC) $(CFLAGS) -o $@ $(SRC)
 
-# Gera riscv.txt chamando o programa
-$(TXT): $(GEN) $(ASM)
+# Executa o programa sempre que make for chamado
+run: $(GEN) $(ASM)
 	./$(GEN)
 
 # Limpeza

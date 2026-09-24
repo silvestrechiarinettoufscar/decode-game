@@ -23,7 +23,7 @@ SRC += $(ADD)
 all: $(TXT)
 
 # Compila o programa C
-$(GEN): $(SRC) $(HEADERS)
+$(GEN): $(SRC)
 	$(CC) $(CFLAGS) -o $@ $(SRC)
 
 # Gera riscv.txt chamando o programa
